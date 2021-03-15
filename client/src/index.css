@@ -1,0 +1,265 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+#root {
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+}
+
+.navBar {
+   background-color: var(--primary);
+   color: white;
+   min-height: 7rem;
+   position: relative;
+   padding: 10px;
+}
+
+.profile {
+   position: absolute;
+   right: 1rem;
+   top: 1rem;
+   display: flex;
+   justify-content: space-around;
+   width: 9rem;
+   align-items: center;
+}
+
+.profile span {
+   font-size: 1.2rem;
+}
+
+.profile img {
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
+}
+
+.navLinks {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+
+.navLinks a {
+   text-decoration: none;
+   font-size: 1.3rem;
+   color: white;
+   opacity: 0.7;
+}
+
+/* Uploaded Css Starts Here */
+
+.upload-container {
+   overflow: auto;
+   height: 84%;
+   padding: 0 10px 10px 10px;
+}
+
+.doc {
+   display: flex;
+   align-items: center;
+   padding: 1rem;
+   height: 4.5rem;
+   margin-top: 2rem;
+   position: relative;
+   box-shadow: 0 0 10px black;
+   border-radius: 5px;
+}
+
+.doc span {
+   width: 60%;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+.btn-div {
+   position: absolute;
+   right: 10px;
+   width: 7.5rem;
+   display: flex;
+   justify-content: space-between;
+   /* border: 1px solid #000; */
+}
+
+.prompt-container {
+   text-align: center;
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* Document CSS Starts Here */
+
+.img-div {
+   width: 200px;
+   height: 200px;
+   position: relative;
+   background-color: black;
+   cursor: pointer;
+   object-fit: scale-down;
+   box-shadow: 4px 4px 30px black;
+   border-radius: 10px;
+   overflow: hidden;
+   display: grid;
+   place-items: center;
+}
+
+.doc-img {
+   opacity: 0.6;
+}
+
+.fullscreen {
+   position: fixed;
+   height: 100vh;
+   width: 100vw;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   overflow: auto;
+   display: grid;
+   place-items: center;
+   object-fit: contain;
+   border-radius: 0;
+   animation: open-image 0.2s ease;
+}
+
+@keyframes open-image {
+   0% {
+      transform: scale(0);
+   }
+   50% {
+      transform: scale(0.5);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+.fullscreen img {
+   position: absolute;
+   /* width: 80%;
+   height: 80%; */
+   cursor: context-menu;
+   opacity: 1;
+}
+
+.download-btn {
+   position: fixed;
+   bottom: 2rem;
+   right: 50%;
+   left: 50%;
+}
+
+.zoom-icon {
+   position: absolute;
+   top: 46%;
+   left: 47%;
+   color: var(--primary);
+   transform: scale(1.6);
+   transition: transition ease 0.2s;
+}
+
+.zoom-icon:active {
+   transform: scale(1.8);
+}
+
+.close-icon {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   color: var(--danger);
+   transform: scale(2);
+   transition: transition ease 0.2s;
+}
+
+.close-icon:active {
+   transform: scale(2.2);
+}
+
+.name-div {
+   margin: 10px 0;
+   /* display: flex; */
+   padding: 0;
+}
+
+.doc-name,
+.description {
+   padding: 1px 5px;
+   border: 1px solid #000;
+   height: 50px;
+   width: 100%;
+}
+
+.description-div {
+   padding: 0;
+}
+
+.full-width-btn {
+   margin-top: 10px;
+   width: 100%;
+}
+
+/* Login Css Starts Here */
+
+.login-container {
+   background: linear-gradient(to left, #2193b0, #6dd5ed);
+   height: 100vh;
+   display: grid;
+   place-items: center;
+}
+
+.login-container nav {
+   position: absolute;
+   background-color: #fff;
+   box-shadow: 1px 1px 20px black;
+   color: var(--primary);
+   height: 5rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.login-div {
+   background-color: #fff;
+   box-shadow: 1px 1px 20px black;
+   max-width: 30rem;
+   width: 90%;
+   height: 45%;
+   border-radius: 20px;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.login-btn {
+   margin-top: 1rem;
+   padding: 10px;
+   background-color: transparent;
+   border: 2px solid var(--primary);
+   font-weight: 500;
+   border-radius: 10px;
+}
+
+.login-btn:hover {
+   color: white;
+   background-color: var(--primary);
+}
+
+.login-btn img {
+   padding: 3px;
+   background-color: #fff;
+   width: 30px;
+}
