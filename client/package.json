@@ -2,6 +2,7 @@
   "name": "doc-saver-latest",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@firebase/app": "^0.6.13",
     "@firebase/auth": "^0.16.2",
